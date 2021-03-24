@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+html {
+  height: 100vh;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+}
+
+html, body {
+  background: #090C10;
+  background: linear-gradient(180deg, rgba(9, 12, 16, 1) 0%, rgba(15, 20, 27, 1) 100%);
+  color: #ffffff;
+  font-family: "Dosis";
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.wrapper .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+
+  grid-column: 2;
+}
+
+.wrapper .profile .profile-name {
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.wrapper .profile .profile-description {
+  margin-top: 20px;
+  padding: 0;
+  width: 60%;
+  font-size: 1.25rem;
+  color: rgb(175, 175, 175);
+
+}
+
+.wrapper .profile .profile-description #descriptionSpan {
+  border-top: 1px solid rgb(175, 175, 175);
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.wrapper .profile #contactsSpan {
+  border-top: 1px solid rgb(175, 175, 175);
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.wrapper .profile .contacts {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+}
+
+.wrapper .profile .contacts .contact-item {
+  padding: .3em;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.wrapper .profile .contacts .contact-item:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.wrapper .profile .contacts .contact-item img {
+  width: 1.5em;
+}
+
+.wrapper .profile .contacts .contact-item img.lg {
+  width: 1.7em;
+}
+
