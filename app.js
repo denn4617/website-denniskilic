@@ -4,7 +4,7 @@ const app = express();
 
 //'207.154.207.8'
 const hostname = 'localhost';
-const port = 80;
+const port = process.env.PORT || 3000;
 
 
 app.use('/public', express.static(path.join(__dirname + '/public')));
