@@ -10,8 +10,10 @@ body {
 }
 
 html, body {
-  background: #eeeeee;
-  background: linear-gradient(180deg, #ffffff 0%, #adadad 100%);
+  /* background: #eeeeee;
+  background: linear-gradient(180deg, #ffffff 0%, #adadad 100%); */
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(134, 134, 134, 1) 100%);
   color: black;
   font-family: "Dosis";
   margin: 0;
@@ -23,6 +25,7 @@ html, body {
 }
 
 .wrapper .profile {
+  padding-top: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +37,7 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
+  align-content: center;
   margin: 0 auto;
   grid-column: 2;
 }
@@ -95,7 +99,6 @@ html, body {
   align-items: center;
   padding: 0;
   margin-top: 0;
-  filter: none;
 }
 
 .wrapper .profile .contacts .contact-item {
@@ -111,22 +114,24 @@ html, body {
 
 .wrapper .profile .contacts .contact-item img {
   width: 2.5em;
+  filter: none;
 }
 
 .wrapper .profile .contacts .contact-item img.lg {
   width: 2.9em;
 }
+
 .wrapper .profile-wrapper .profile .location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .wrapper .profile .location img {
@@ -145,21 +150,30 @@ html, body {
 */
 
 .dark-mode {
-  background: linear-gradient(180deg, rgba(9, 12, 16, 1) 0%, rgba(15, 20, 27, 1) 100%);
+  /* background: #090C10;
+  background: linear-gradient(180deg, rgba(9, 12, 16, 1) 0%, rgba(15, 20, 27, 1) 100%); */
   color: #ffffff;
-  background: #090C10;
+  transition: .5s;
+  background: rgb(32, 43, 59);
+  background: radial-gradient(circle, rgba(32, 43, 59, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
-.dark-mode .wrapper .profile .contacts {
+.dark-mode .wrapper .profile .contacts .contact-item img {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+}
+
+.dark-mode .wrapper .profile .location img {
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
 }
 
 .dark-mode .wrapper .profile .profile-image {
   border: 5px solid #ffffff;
 }
+
 .dark-mode .wrapper .profile .profile-description {
   color: rgb(175, 175, 175);
 }
+
 /*
  * Darkmode switch  
 */
