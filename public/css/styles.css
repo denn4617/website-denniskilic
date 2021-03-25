@@ -10,9 +10,9 @@ body {
 }
 
 html, body {
-  background: #090C10;
-  background: linear-gradient(180deg, rgba(9, 12, 16, 1) 0%, rgba(15, 20, 27, 1) 100%);
-  color: #ffffff;
+  background: #eeeeee;
+  background: linear-gradient(180deg, #ffffff 0%, #adadad 100%);
+  color: black;
   font-family: "Dosis";
   margin: 0;
 }
@@ -35,8 +35,20 @@ html, body {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-
   grid-column: 2;
+}
+
+.wrapper .profile .profile-image {
+  border: 5px solid #000000;
+  border-radius: 50%;
+  width: calc(min(50vw, 250px));
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wrapper .profile .profile-image:hover {
+  opacity: 0.7;
+  box-shadow: 0 0 20px rgb(65, 102, 184);
 }
 
 .wrapper .profile .profile-name {
@@ -52,8 +64,8 @@ html, body {
   padding: 0;
   width: 60%;
   font-size: 1.25rem;
-  color: rgb(175, 175, 175);
-
+  font-weight: bold;
+  color: rgb(37, 37, 37);
 }
 
 .wrapper .profile .profile-description #descriptionSpan {
@@ -83,7 +95,7 @@ html, body {
   align-items: center;
   padding: 0;
   margin-top: 0;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+  filter: none;
 }
 
 .wrapper .profile .contacts .contact-item {
@@ -98,10 +110,123 @@ html, body {
 }
 
 .wrapper .profile .contacts .contact-item img {
-  width: 1.5em;
+  width: 2.5em;
 }
 
 .wrapper .profile .contacts .contact-item img.lg {
-  width: 1.7em;
+  width: 2.9em;
+}
+.wrapper .profile-wrapper .profile .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+.wrapper .profile .location img {
+  width: 2.4em;
+}
+
+.wrapper .profile .location p {
+  font-size: .9em;
+  font-weight: bold;
+  margin: .2em;
+  /* color: rgba(0, 0, 0, 0.7); */
+}
+
+/*
+ * Darkmode 
+*/
+
+.dark-mode {
+  background: linear-gradient(180deg, rgba(9, 12, 16, 1) 0%, rgba(15, 20, 27, 1) 100%);
+  color: #ffffff;
+  background: #090C10;
+}
+
+.dark-mode .wrapper .profile .contacts {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(23deg) brightness(118%) contrast(118%);
+}
+
+.dark-mode .wrapper .profile .profile-image {
+  border: 5px solid #ffffff;
+}
+.dark-mode .wrapper .profile .profile-description {
+  color: rgb(175, 175, 175);
+}
+/*
+ * Darkmode switch  
+*/
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

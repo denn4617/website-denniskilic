@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="public/css/styles.css" type="text/css">
     <link rel="stylesheet" href="public/css/modalStyle.css" type="text/css">
-    
 
     <title>Dunnis</title>
 </head>
@@ -19,15 +18,19 @@
         <div id="modalCaption"></div>
     </div>
 
-    <img src="public/img/slet.svg" alt="">
+    <label class="switch">
+        <input type="checkbox" onclick="darkModeFunc()">
+        <span class="slider round"></span>
+    </label>
+
     <div class="wrapper">
         <div class="profile">
             <img src="https://avatars.githubusercontent.com/u/56546859?s=460&u=5ca56eec6917fd0e7c1855de960fdc637ff6d788&v=4"
                 alt="Dennis Kilic" class="profile-image" id="profileImage">
-            
+
             <h1 class="profile-name">Dennis Kilic</h1>
             <div class="profile-description">
-                    <span id="descriptionSpan">Studying Software Engineering at Aalborg University</span>
+                <span id="descriptionSpan">Studying Software Engineering at Aalborg University</span>
             </div>
             <span id="contactsSpan">
                 <ul class="contacts">
@@ -48,15 +51,15 @@
                     </li>
                 </ul>
             </span>
-            
+
             <div class="location">
                 <img src="public/img/location.svg" alt="Location">
+                <p>Aalborg, Denmark</p>
             </div>
         </div>
 
-
     </div>
-    <script src="public/js/profileImgModal.js" type="text/javascript"></script>
+    <script src="public/js/funcList.js" type="text/javascript"></script>
 </body>
 
 </html>
