@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- css link -->
     <link rel="stylesheet" href="public/css/styles.css" type="text/css">
     <link rel="stylesheet" href="public/css/modalStyle.css" type="text/css">
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="public/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="public/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="public/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="public/img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <title>Dunnis</title>
 </head>
@@ -22,11 +29,31 @@
         <img class="modal-content" id="modalImg">
         <div id="modalCaption"></div>
     </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <input type="checkbox" name="checkbox" class="switch" onchange="darkModeFunc()" checked>
+            <!-- <label class="switch">
+                <input type="checkbox" onclick="darkModeFunc()">
 
-    <label class="switch">
-        <input type="checkbox" onclick="darkModeFunc()">
-        <span class="slider round"></span>
-    </label>
+                <span class="slider">
+                    <img class="slider-img" src="public/img/darkmode.svg" alt="DarkmodeMoon" type="image/svg+xml">
+                </span>
+            </label> -->
+        </div>
+    </nav>
+
+
 
     <div class="wrapper">
         <div class="profile">
