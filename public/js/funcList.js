@@ -8,7 +8,7 @@ var modalImg = document.getElementById("modalImg");
 console.log(modalImg);
 var captionText = document.getElementById("modalCaption");
 console.log(captionText);
-img.onclick = function(){
+img.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
@@ -18,9 +18,12 @@ img.onclick = function(){
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
 }
+modal.addEventListener('click', function () {
+  this.style.display = "none";
+});
 
 function darkModeFunc() {
   let element = document.body;

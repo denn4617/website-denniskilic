@@ -17,9 +17,12 @@ html, body {
   color: black;
   font-family: "Dosis";
   margin: 0;
+  transition: all 2s !important;
+  -webkit-transition: background 2s linear;
+  -ms-transition: background 2s linear;
+  transition: background 2s linear;
 }
 
-.transition {}
 
 .wrapper {
   display: grid;
@@ -49,12 +52,13 @@ html, body {
   border-radius: 50%;
   width: calc(min(50vw, 250px));
   cursor: pointer;
-  transition: 0.3s;
+  transition: border 1s;
 }
 
 .wrapper .profile .profile-image:hover {
   opacity: 0.7;
   box-shadow: 0 0 20px rgb(65, 102, 184);
+  transition: 0.3s;
 }
 
 .wrapper .profile .profile-name {
@@ -79,6 +83,7 @@ html, body {
   display: inline-block;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: color 2s;
 }
 
 .wrapper .profile #contactsSpan {
@@ -117,6 +122,7 @@ html, body {
 .wrapper .profile .contacts .contact-item img {
   width: 2.5em;
   filter: none;
+  transition: 2s;
 }
 
 .wrapper .profile .contacts .contact-item img.lg {
@@ -134,16 +140,19 @@ html, body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  transition: 2s;
 }
 
 .wrapper .profile .location img {
   width: 2.4em;
+  transition: 2s;
 }
 
 .wrapper .profile .location p {
   font-size: .9em;
   font-weight: bold;
   margin: .2em;
+  /* transition: 1s; */
   /* color: rgba(0, 0, 0, 0.7); */
 }
 
@@ -400,9 +409,11 @@ input:checked+.slider:before {
     filter: blur(0px);
   }
 }
-.navbar{
+
+.navbar {
   border-radius: 0% !important;
 }
+
 .navbar-nav {
   margin: 4px 0 !important;
 }
