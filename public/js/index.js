@@ -24,9 +24,3 @@ span.onclick = function () {
 modal.addEventListener('click', function () {
   this.style.display = "none";
 });
-
-function darkModeFunc() {
-  let element = document.body;
-  element.classList.toggle("dark-mode");
-  element.classList.toggle("transition");
-}
