@@ -1,3 +1,4 @@
+import { darkModeFunc } from "./darkmode.js";
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -24,3 +25,5 @@ span.onclick = function () {
 modal.addEventListener('click', function () {
   this.style.display = "none";
 });
+
+document.getElementById('darkmodeSwitch').onchange = darkModeFunc;
