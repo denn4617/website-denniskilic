@@ -29,7 +29,7 @@ html, body {
 }
 
 .wrapper .profile {
-  padding-top: 25%;
+  padding-top: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,8 +452,4 @@ html, body {
   border: 2px solid #21262d;
   border-radius: 6px;
   grid-column: 2;
-}
-
-tr {
-  /* border-top: 1px solid #21262d; */
 }
