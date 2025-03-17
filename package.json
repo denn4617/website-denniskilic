@@ -8,10 +8,12 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "echo 'No build needed'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC"
-}
+},
+
